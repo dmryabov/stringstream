@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="LTDBeget\stringstream\StringStream" namespace="LTDBeget\stringstream" name="StringStream" abstract="false" final="false" start="18" end="197">
+  <file path="/home/damien/projects/stringstream/src/LTDBeget/stringstream" file="StringStream.php" realpath="/home/damien/projects/stringstream/src/LTDBeget/stringstream/StringStream.php" size="3806" time="2016-03-18T12:55:49+00:00" unixtime="1458305749" sha1="d4e0e2505050e39d72ba93f880badb98e5e23fe2" relative="LTDBeget/stringstream/StringStream.php"/>
+  <docblock>
+    <description compact="String stream data structure Class StringStream"/>
+    <package value="LTDBeget\stringstream"/>
+  </docblock>
+  <constructor name="__construct" start="24" end="36" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="StringStream constructor."/>
+      <param type="string" variable="$string"/>
+    </docblock>
+    <parameter name="string" byreference="false" type="object">
+      <type full="LTDBeget\stringstream\string" namespace="LTDBeget\stringstream" name="string"/>
+    </parameter>
+  </constructor>
+  <method name="getString" start="42" end="45" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Original string data of stream"/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="length" start="51" end="54" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Length of string"/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="current" start="60" end="63" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Current char of stream"/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="currentAscii" start="69" end="72" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Current char of stream as AsciiChar"/>
+      <return type="object">
+        <type full="LTDBeget\ascii\AsciiChar" namespace="LTDBeget\ascii" name="AsciiChar"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="position" start="78" end="81" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Position in stream of current char"/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="next" start="86" end="90" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="go to next char in stream"/>
+    </docblock>
+  </method>
+  <method name="previous" start="95" end="99" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="go to previous char of stream"/>
+    </docblock>
+  </method>
+  <method name="start" start="104" end="107" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="go to start of stream"/>
+    </docblock>
+  </method>
+  <method name="isStart" start="113" end="116" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="is start of stream"/>
+      <return type="object">
+        <type full="LTDBeget\stringstream\bool" namespace="LTDBeget\stringstream" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="end" start="121" end="124" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="go to end of stream"/>
+    </docblock>
+  </method>
+  <method name="isEnd" start="130" end="133" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="is end of stream"/>
+      <return type="object">
+        <type full="LTDBeget\stringstream\bool" namespace="LTDBeget\stringstream" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="ignoreWhitespace" start="138" end="145" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="ignore chars in stream while it is white space"/>
+    </docblock>
+  </method>
+  <method name="ignoreHorizontalSpace" start="150" end="157" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="ignore chars in stream while it is horizontal space"/>
+    </docblock>
+  </method>
+  <method name="ignoreVerticalSpace" start="162" end="169" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="ignore chars in stream while it is vertical space"/>
+    </docblock>
+  </method>
+  <member name="originalString" visibility="private" static="false" line="174">
+    <docblock>
+      <description/>
+      <var type="string"/>
+    </docblock>
+  </member>
+  <member name="stream" visibility="private" static="false" line="179">
+    <docblock>
+      <description/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <member name="length" visibility="private" static="false" line="184">
+    <docblock>
+      <description/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="pointerAtEnd" visibility="private" static="false" line="190">
+    <docblock>
+      <description compact="if next returns false it member will be true, else false"/>
+      <var type="object">
+        <type full="LTDBeget\stringstream\bool" namespace="LTDBeget\stringstream" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="pointerAtStart" visibility="private" static="false" line="196">
+    <docblock>
+      <description compact="if prev returns false it member will be true, else false"/>
+      <var type="object">
+        <type full="LTDBeget\stringstream\bool" namespace="LTDBeget\stringstream" name="bool"/>
+      </var>
+    </docblock>
+  </member>
+</class>

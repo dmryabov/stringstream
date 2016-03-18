@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - LTDBeget\stringstream\StringStream</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.html">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.html">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html#LTDBeget_stringstream">LTDBeget\stringstream</a>
+          </li>
+          <li class="separator">StringStream</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/LTDBeget/stringstream/StringStream.php.html#line18">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>LTDBeget\stringstream\</small>StringStream</h1>
+        <h4>String stream data structure Class StringStream</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class StringStream
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$originalString</a>;
+                    </li><li>private  <a href="#members">$stream</a>;
+                    </li><li>private  <a href="#members">$length</a>;
+                    </li><li>private <span title="LTDBeget\stringstream\bool">bool</span> <a href="#members">$pointerAtEnd</a>;
+                    </li><li>private <span title="LTDBeget\stringstream\bool">bool</span> <a href="#members">$pointerAtStart</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/__construct.html">__construct</a>()
+                    </li><li>public string <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/getString.html">getString</a>()
+                    </li><li>public int <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/length.html">length</a>()
+                    </li><li>public string <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/current.html">current</a>()
+                    </li><li>public AsciiChar <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/currentAscii.html">currentAscii</a>()
+                    </li><li>public int <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/position.html">position</a>()
+                    </li><li>public void <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/next.html">next</a>()
+                    </li><li>public void <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/previous.html">previous</a>()
+                    </li><li>public void <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/start.html">start</a>()
+                    </li><li>public bool <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/isStart.html">isStart</a>()
+                    </li><li>public void <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/end.html">end</a>()
+                    </li><li>public bool <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/isEnd.html">isEnd</a>()
+                    </li><li>public void <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/ignoreWhitespace.html">ignoreWhitespace</a>()
+                    </li><li>public void <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/ignoreHorizontalSpace.html">ignoreHorizontalSpace</a>()
+                    </li><li>public void <a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/ignoreVerticalSpace.html">ignoreVerticalSpace</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="length"><strong>$length</strong>
+                —
+                int</li>
+            <li id="originalString"><strong>$originalString</strong>
+                —
+                string</li>
+            <li id="pointerAtEnd"><strong>$pointerAtEnd</strong>
+                —
+                <a title="LTDBeget\stringstream\bool" href="../classes/LTDBeget_stringstream_bool.html">LTDBeget\stringstream\bool</a><br/><span class="indent">if next returns false it member will be true, else false</span></li>
+            <li id="pointerAtStart"><strong>$pointerAtStart</strong>
+                —
+                <a title="LTDBeget\stringstream\bool" href="../classes/LTDBeget_stringstream_bool.html">LTDBeget\stringstream\bool</a><br/><span class="indent">if prev returns false it member will be true, else false</span></li>
+            <li id="stream"><strong>$stream</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/__construct.html">__construct()</a>
+                — StringStream constructor.</li>
+            <li id="current"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/current.html">current()</a>
+                — Current char of stream</li>
+            <li id="currentAscii"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/currentAscii.html">currentAscii()</a>
+                — Current char of stream as AsciiChar</li>
+            <li id="end"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/end.html">end()</a>
+                — go to end of stream</li>
+            <li id="getString"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/getString.html">getString()</a>
+                — Original string data of stream</li>
+            <li id="ignoreHorizontalSpace"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/ignoreHorizontalSpace.html">ignoreHorizontalSpace()</a>
+                — ignore chars in stream while it is horizontal space</li>
+            <li id="ignoreVerticalSpace"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/ignoreVerticalSpace.html">ignoreVerticalSpace()</a>
+                — ignore chars in stream while it is vertical space</li>
+            <li id="ignoreWhitespace"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/ignoreWhitespace.html">ignoreWhitespace()</a>
+                — ignore chars in stream while it is white space</li>
+            <li id="isEnd"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/isEnd.html">isEnd()</a>
+                — is end of stream</li>
+            <li id="isStart"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/isStart.html">isStart()</a>
+                — is start of stream</li>
+            <li id="length"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/length.html">length()</a>
+                — Length of string</li>
+            <li id="next"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/next.html">next()</a>
+                — go to next char in stream</li>
+            <li id="position"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/position.html">position()</a>
+                — Position in stream of current char</li>
+            <li id="previous"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/previous.html">previous()</a>
+                — go to previous char of stream</li>
+            <li id="start"><a title="LTDBeget\stringstream\StringStream" href="../classes/LTDBeget_stringstream_StringStream/start.html">start()</a>
+                — go to start of stream</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.2-dev - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

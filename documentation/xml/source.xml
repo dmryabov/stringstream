@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/home/damien/projects/stringstream/src">
+    <dir name="LTDBeget">
+      <dir name="stringstream">
+        <file name="StringStream.php" size="3806" time="2016-03-18T12:55:49+00:00" unixtime="1458305749" sha1="d4e0e2505050e39d72ba93f880badb98e5e23fe2" xml="tokens/LTDBeget/stringstream/StringStream.php.xml"/>
+      </dir>
+    </dir>
+  </dir>
+</source>

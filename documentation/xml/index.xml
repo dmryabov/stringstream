@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/home/damien/projects/stringstream/src">
+  <namespace name="LTDBeget\stringstream">
+    <class name="StringStream" src="LTDBeget/stringstream/StringStream.php" description="String stream data structure Class StringStream" xml="classes/LTDBeget_stringstream_StringStream.xml"/>
+  </namespace>
+</index>
