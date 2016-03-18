@@ -1,0 +1,28 @@
+{
+  "name": "ltd-beget/stringstream",
+  "type": "library",
+  "description": "Php Stringstream data structure.",
+  "keywords": [
+    "stringstream",
+    "stream"
+  ],
+  "authors": [
+    {
+      "name": "Viskov Sergey",
+      "homepage": "https://github.com/voksiv"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "ltd-beget/ascii-table" : "1.*"
+  },
+  "require-dev": {
+    "theseer/phpdox": "0.8.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "LTDBeget\\stringstream": "src"
+    }
+  }
+}
+

@@ -1,0 +1,7 @@
+.idea
+documentation
+vendor
+composer.lock
+composer.phar
+runtime
+index.php
