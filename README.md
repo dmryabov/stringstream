@@ -6,7 +6,7 @@
 [![Documentation](https://img.shields.io/badge/code-documented-brightgreen.svg)](http://ltd-beget.github.io/stringstream/documentation/html/index.html)
 [![License MIT](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/LTD-Beget/stringstream/blob/master/LICENSE)
 
-Php library with ascii table enum.
+Php Stringstream data structure.
 
 ## Installation
 
@@ -16,6 +16,22 @@ composer require ltd-beget/stringstream
 
 ## Usage
 ```php
+<?php
+    use LTDBeget\stringstream\StringStream;
+    
+    require(__DIR__ . '/vendor/autoload.php');
+    
+    $stream = new StringStream("Hello, World!");
+    
+    do {
+        if($stream->currentAscii()->isWhiteSpace()) {
+            $stream->ignoreWhitespace();
+        } else {
+            echo $stream->current().PHP_EOL;
+            $stream->next();
+        }
+    
+    } while (! $stream->isEnd());
 
 ```
 ## Developers
