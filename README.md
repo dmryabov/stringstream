@@ -1,4 +1,4 @@
-# ascii table
+# Php StringStream
 
 [![Latest Stable Version](https://poser.pugx.org/ltd-beget/stringstream/version)](https://packagist.org/packages/ltd-beget/stringstream) 
 [![Total Downloads](https://poser.pugx.org/ltd-beget/stringstream/downloads)](https://packagist.org/packages/ltd-beget/stringstream)
