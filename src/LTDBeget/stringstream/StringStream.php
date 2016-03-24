@@ -8,6 +8,7 @@
 namespace LTDBeget\stringstream;
 
 
+use Hoa\Ustring\Ustring;
 use LTDBeget\ascii\AsciiChar;
 
 /**
@@ -20,37 +21,18 @@ class StringStream
     /**
      * StringStream constructor.
      * @param string $string
+     * @throws \BadMethodCallException
+     * @throws \Hoa\Ustring\Exception
      */
     public function __construct(string $string)
     {
         if(empty($string)) {
-            throw new \BadMethodCallException("Cannot make stream from empty string");
+            throw new \BadMethodCallException('Cannot make stream from empty string');
         }
-
-        $this->originalString = $string;
-        $this->stream = unpack('C*', $string);
-        $this->length = count($this->stream);
-
+        
+        $this->stream = (new Ustring($string))->getIterator();
         $this->pointerAtStart = true;
         $this->pointerAtEnd = false;
-    }
-
-    /**
-     * Original string data of stream
-     * @return string
-     */
-    public function getString()
-    {
-        return $this->originalString;
-    }
-
-    /**
-     * Length of string
-     * @return int
-     */
-    public function length()
-    {
-        return $this->length;
     }
 
     /**
@@ -59,16 +41,26 @@ class StringStream
      */
     public function current() : string
     {
-        return chr(current($this->stream));
+        return current($this->stream);
+    }
+
+    /**
+     * @return int
+     */
+    public function ord() : int 
+    {
+        return ord($this->current());
     }
 
     /**
      * Current char of stream as AsciiChar
      * @return AsciiChar
+     * @throws \LogicException
+     * @throws \InvalidArgumentException
      */
     public function currentAscii() : AsciiChar
     {
-        return AsciiChar::get(current($this->stream));
+        return AsciiChar::get($this->ord());
     }
 
     /**
@@ -134,6 +126,8 @@ class StringStream
 
     /**
      * ignore chars in stream while it is white space
+     * @throws \InvalidArgumentException
+     * @throws \LogicException
      */
     public function ignoreWhitespace()
     {
@@ -146,6 +140,8 @@ class StringStream
 
     /**
      * ignore chars in stream while it is horizontal space
+     * @throws \LogicException
+     * @throws \InvalidArgumentException
      */
     public function ignoreHorizontalSpace()
     {
@@ -158,6 +154,8 @@ class StringStream
 
     /**
      * ignore chars in stream while it is vertical space
+     * @throws \InvalidArgumentException
+     * @throws \LogicException
      */
     public function ignoreVerticalSpace()
     {
@@ -169,19 +167,9 @@ class StringStream
     }
 
     /**
-     * @var string
-     */
-    private $originalString;
-
-    /**
      * @var array
      */
     private $stream;
-
-    /**
-     * @var int
-     */
-    private $length;
 
     /**
      * if next returns false it member will be true, else false
