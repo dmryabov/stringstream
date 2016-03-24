@@ -14,7 +14,8 @@
   ],
   "require": {
     "php": ">=7.0",
-    "ltd-beget/ascii-table" : "1.*"
+    "ltd-beget/ascii-table" : "1.*",
+    "hoa/ustring": "4.16.01.11"
   },
   "require-dev": {
     "theseer/phpdox": "0.8.*"
@@ -25,4 +26,3 @@
     }
   }
 }
-
