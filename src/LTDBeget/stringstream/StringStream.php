@@ -26,10 +26,6 @@ class StringStream
      */
     public function __construct(string $string)
     {
-        if(empty($string)) {
-            throw new \BadMethodCallException('Cannot make stream from empty string');
-        }
-        
         $this->stream = (new Ustring($string))->getIterator();
         $this->pointerAtStart = true;
         $this->pointerAtEnd = false;
