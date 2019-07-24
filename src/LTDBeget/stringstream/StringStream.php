@@ -7,8 +7,7 @@
 
 namespace LTDBeget\stringstream;
 
-
-use Hoa\Ustring\Ustring;
+use ArrayIterator;
 use LTDBeget\ascii\AsciiChar;
 
 /**
@@ -21,12 +20,10 @@ class StringStream
     /**
      * StringStream constructor.
      * @param string $string
-     * @throws \BadMethodCallException
-     * @throws \Hoa\Ustring\Exception
      */
     public function __construct(string $string)
     {
-        $this->stream = (new Ustring($string))->getIterator();
+        $this->stream = $this->makeIterator($string);
         $this->pointerAtStart = true;
         $this->pointerAtEnd = false;
     }
@@ -43,7 +40,7 @@ class StringStream
     /**
      * @return int
      */
-    public function ord() : int 
+    public function ord() : int
     {
         return ord($this->current());
     }
@@ -128,7 +125,7 @@ class StringStream
     public function ignoreWhitespace()
     {
         ignoreWhitespace:
-        if (! $this->isEnd() && $this->currentAscii()->isWhiteSpace()) {
+        if (!$this->isEnd() && $this->currentAscii()->isWhiteSpace()) {
             $this->next();
             goto ignoreWhitespace;
         }
@@ -156,10 +153,19 @@ class StringStream
     public function ignoreVerticalSpace()
     {
         ignoreHorizontalSpace:
-        if (! $this->isEnd() && $this->currentAscii()->isVerticalSpace()) {
+        if (!$this->isEnd() && $this->currentAscii()->isVerticalSpace()) {
             $this->next();
             goto ignoreHorizontalSpace;
         }
+    }
+
+    /**
+     * @param string $string
+     * @return ArrayIterator
+     */
+    private function makeIterator(string $string) : ArrayIterator
+    {
+        return new ArrayIterator(preg_split('#(?<!^)(?!$)#u', $string));
     }
 
     /**
