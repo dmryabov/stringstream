@@ -1,8 +1,8 @@
 <?php
 /**
  * @author: Viskov Sergey
- * @date: 3/18/16
- * @time: 1:15 PM
+ * @date  : 3/18/16
+ * @time  : 1:15 PM
  */
 
 namespace LTDBeget\stringstream;
@@ -12,10 +12,15 @@ use LTDBeget\ascii\AsciiChar;
 /**
  * String stream data structure
  * Class StringStream
+ *
  * @package LTDBeget\stringstream
  */
 class StringStream
 {
+    private array $stream;
+    private int $position;
+    private int $length;
+
     /**
      * StringStream constructor.
      */
@@ -121,10 +126,11 @@ class StringStream
 
     /**
      * Ignore chars in stream while it is white space
+     *
      * @throws \InvalidArgumentException
      * @throws \LogicException
      */
-    public function ignoreWhitespace() : void
+    public function ignoreWhitespace(): void
     {
         while (!$this->isEnd() && $this->currentAscii()->isWhiteSpace()) {
             $this->next();
@@ -133,10 +139,11 @@ class StringStream
 
     /**
      * Ignore chars in stream while it is horizontal space
+     *
      * @throws \LogicException
      * @throws \InvalidArgumentException
      */
-    public function ignoreHorizontalSpace() : void
+    public function ignoreHorizontalSpace(): void
     {
         while (!$this->isEnd() && $this->currentAscii()->isHorizontalSpace()) {
             $this->next();
@@ -145,17 +152,18 @@ class StringStream
 
     /**
      * Ignore chars in stream while it is vertical space
+     *
      * @throws \InvalidArgumentException
      * @throws \LogicException
      */
-    public function ignoreVerticalSpace() : void
+    public function ignoreVerticalSpace(): void
     {
         while (!$this->isEnd() && $this->currentAscii()->isVerticalSpace()) {
             $this->next();
         }
     }
 
-    private function splitString(string $string) : array
+    private function splitString(string $string): array
     {
         if ($string === '') {
             return [];
@@ -163,19 +171,4 @@ class StringStream
 
         return (array)(preg_split('#(?<!^)(?!$)#u', $string));
     }
-
-    /**
-     * @var array
-     */
-    private $stream;
-
-    /**
-     * @var int
-     */
-    private $position;
-
-    /**
-     * @var int
-     */
-    private $length;
 }
